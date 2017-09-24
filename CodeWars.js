@@ -69,7 +69,7 @@ function nbYear(p0, percent, aug, p) {
 }
 
 //DUPLICATE COUNT: Given a string, return count of letters that appear more than once in string. 
-//duplicateCount("Indivisibilities") ==> 2
+//duplicateCount("Indivisibilities") ==> 2 
 
 function objectify(str) {
   const lowercase = str.toLowerCase();
