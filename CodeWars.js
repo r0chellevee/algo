@@ -91,5 +91,19 @@ function duplicateCount(text){
   return count;
 }
 
+//A REFACTOR OF THE ABOVE SOLUTION:
+function duplicateCount(text){
+  return text.toLowerCase().split('').reduce((acc, letter) => {
+    //if letter already exists as key, add one
+    //else assign default 1
+    acc[letter] = acc[letter] ? acc[letter] + 1 : 1;
+    //once value at letter reaches 2, increase count by one
+    if (acc[letter] === 2) {acc.count++}
+    //return accumulator
+    return acc;
+    //initialize accumulator as object with key count
+    //return count
+  }, {count: 0}).count;
+}
 
 
