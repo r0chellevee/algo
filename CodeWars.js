@@ -22,3 +22,12 @@ function accum(s) {
     return letter.toUpperCase() + letter.repeat(i).toLowerCase()
   }).join('-')
 }
+
+//BASIC OP: basicOp('+', 4, 7)  ==> 11
+
+function basicOp(operation, value1, value2){
+  return eval(value1 + operation + value2)
+}
+
+
+
