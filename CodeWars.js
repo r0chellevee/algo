@@ -40,5 +40,20 @@ function filter_list(l) {
   return l
 }
 
+//GETSUM: given two integers, a and b, find sum of all numbers in between, including both a and b. If both numbers are equal, return a or b.  
+function getSum(a, b) {
+  let result = 0;
+  let start = Math.min(a, b);
+  let end = Math.max(a, b);
+  if (a === b) {
+    return a;
+  } else {
+    for (var i = start; i <= end; i++) {
+      result += i;
+    }
+  }
+  return result
+}
 
+getSum(-1, 2)
 
