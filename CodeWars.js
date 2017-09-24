@@ -57,3 +57,14 @@ function getSum(a, b) {
 
 getSum(-1, 2)
 
+//NBYEAR: Given the current population number, a percentage rate (of growth), an integer representing annual increase in population, and a target number of population, how many years will it take for the population to reach or surpass the target population count? 
+//nbYear(1500, 5, 100, 5000) ==> 15;
+
+function nbYear(p0, percent, aug, p) {
+  let numYears = 0;
+  for (var i = p0; i < p; i = i+aug+(i*(percent*.01))) {
+    numYears++
+  }
+  return numYears
+}
+
