@@ -29,5 +29,16 @@ function basicOp(operation, value1, value2){
   return eval(value1 + operation + value2)
 }
 
+//FILTER LIST: given an array of strings and integers, remove all the strings and return array
+//filter_list([1,2,'aasf','1','123',123]) ==> [1,2, 123]
+function filter_list(l) {
+  for (var i = 0; i < l.length; i++) {
+    if (typeof l[i] === 'string') {
+      l.splice(i--, 1);
+    }
+  }
+  return l
+}
+
 
 
