@@ -106,4 +106,23 @@ function duplicateCount(text){
   }, {count: 0}).count;
 }
 
+//TITLECASE: Transform a given string so that the first letter of each significant word is capitalized. If given a second argument, it shall be a string of words that should not be capitalized. 
+//titleCase('THE WIND IN THE WILLOWS', 'The In') ==> 'The Wind in the Willows'
 
+function titleCase(str, delimiter = '') {
+  if (str === '') { return '' }
+  var result = [];
+  var words = str.toLowerCase().split(' ');
+  var firstWord = result.push(words[0][0].toUpperCase() + words[0].slice(1))
+  var limits = delimiter !== '' ? delimiter.toLowerCase().split(' ') : ''
+  for (var i = 1; i < words.length; i++) {
+  console.log(limits.includes(words[i]), words[i], limits)
+    if (delimiter !== '' && limits.includes(words[i])) {
+   
+      result.push(words[i]);
+    } else {
+      result.push(words[i][0].toUpperCase() + words[i].slice(1))
+    }
+  }
+  return result.join(' ');
+}
