@@ -126,3 +126,18 @@ function titleCase(str, delimiter = '') {
   }
   return result.join(' ');
 }
+
+//REFACTOR of titleCase solution
+
+function titleCase(str, opt) {
+  const limits = opt !== undefined? opt.toLowerCase().split(' ') : undefined
+  return str.toLowerCase().split(' ').map((word, i) => {
+    
+    if (word !== ' ' && i === 0 || !limits.includes(word)) {
+      word = word.split('');
+      word[0] = word[0].toUpperCase();
+      word = word.join('')
+    }
+    return word;
+  }).join(' ')
+}
