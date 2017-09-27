@@ -107,7 +107,7 @@ function duplicateCount(text){
 }
 
 //TITLECASE: Transform a given string so that the first letter of each significant word is capitalized. If given a second argument, it shall be a string of words that should not be capitalized. 
-//titleCase('THE WIND IN THE WILLOWS', 'The In') ==> 'The Wind in the Willows'
+//titleCase('THE WIND IN THE WILLOWS', 'The In') ==> 'Th e Wind in the Willows'
 
 function titleCase(str, delimiter = '') {
   if (str === '') { return '' }
