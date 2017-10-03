@@ -17,3 +17,22 @@ function firstDuplicate(arr, store) {
   store.push(arr.shift()) 
   return firstDuplicate(arr, store)
 }
+
+
+
+
+
+
+
+
+//OPTIMIZED SOLUTION:
+
+function firstDuplicate(arr) {
+  var duplicates = {}
+  for (var i = 0; i < arr.length; i++) {
+    if (duplicates[arr[i]]) {
+      return arr[i]
+    }
+    duplicates[arr[i]] = arr[i]
+  }
+}
