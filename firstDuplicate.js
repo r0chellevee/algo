@@ -18,13 +18,6 @@ function firstDuplicate(arr, store) {
   return firstDuplicate(arr, store)
 }
 
-
-
-
-
-
-
-
 //OPTIMIZED SOLUTION:
 
 function firstDuplicate(arr) {
