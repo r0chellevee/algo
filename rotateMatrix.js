@@ -14,10 +14,8 @@ function rotateImage(a) {
     return a
 }
 
-//****Refactored version****
-var matrix = [[1,2,3], [4,5,6], [7,8,9]]
-rotateImage(matrix)
 
+//****Refactored version****
 function rotateImage(a) {
     for (let i = 0; i < a.length; ++i) {
         for (let j = 0; j < i; ++j) {
